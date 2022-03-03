@@ -1,6 +1,6 @@
-# template
+# Template GetX
 
-A new Flutter project.
+Template project with GetX, splash, login, home and unit tests.
 
 ## Getting Started
 
