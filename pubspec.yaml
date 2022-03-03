@@ -12,8 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  get: ^4.6.1
-  shared_preferences: ^2.0.13
+  get: ^4.6.1 # state managment getx
+  package_info_plus: ^1.4.0 # info package device
+  shared_preferences: ^2.0.13 # preferences
+  version: ^2.0.0 # compare versions
 
 dev_dependencies:
   flutter_test:

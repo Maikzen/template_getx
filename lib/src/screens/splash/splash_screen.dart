@@ -8,12 +8,21 @@ class SplashScreen extends GetView<SplashController> {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) => checkSession());
+    WidgetsBinding.instance!.addPostFrameCallback((_) => checkStatusVersion());
     return const Scaffold(
       body: Center(
         child: Text('Splash'),
       ),
     );
+  }
+
+  checkStatusVersion() async {
+    StatusVersion? statusVersion = await controller.checkVersionApp();
+    if(statusVersion == StatusVersion.latest){
+      checkSession();
+    } else {
+      // TODO: Update message
+    }
   }
 
   checkSession() async {

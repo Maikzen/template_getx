@@ -5,6 +5,11 @@ class SplashBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<SplashController>(
-        () => SplashController(localDataInterface: Get.find()));
+      () => SplashController(
+        localDataInterface: Get.find(),
+        packageInfoService: Get.find(),
+        compatibilityService: Get.find(),
+      ),
+    );
   }
 }
