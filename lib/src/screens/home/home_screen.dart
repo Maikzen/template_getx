@@ -8,7 +8,7 @@ class HomeScreen extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -18,6 +18,10 @@ class HomeScreen extends GetView<HomeController> {
             TextButton(
               onPressed: logout,
               child: const Text('Logout'),
+            ),
+            TextButton(
+              onPressed: chat,
+              child: const Text('Chat'),
             )
           ],
         ),
@@ -27,8 +31,12 @@ class HomeScreen extends GetView<HomeController> {
 
   logout() async {
     bool logout = await controller.logout();
-    if(logout){
+    if (logout) {
       Get.offNamed(Routes.login);
     }
+  }
+
+  chat() async {
+    Get.toNamed(Routes.chat);
   }
 }

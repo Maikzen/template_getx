@@ -8,6 +8,6 @@ class LoginBinding extends Bindings {
   void dependencies() {
     Get.lazyPut<AuthInterface>(() => AuthService());
     Get.lazyPut<LoginController>(
-        () => LoginController(authInterface: Get.find(), localDataInterface: Get.find()));
+        () => LoginController(authService: Get.find(), preferencesService: Get.find()));
   }
 }

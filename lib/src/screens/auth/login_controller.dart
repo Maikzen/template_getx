@@ -3,15 +3,15 @@ import 'package:template/src/contracts/auth_interface.dart';
 import 'package:template/src/contracts/local_data_interface.dart';
 
 class LoginController extends GetxController {
-  AuthInterface authInterface;
-  LocalDataInterface localDataInterface;
+  AuthInterface authService;
+  LocalDataInterface preferencesService;
 
-  LoginController({required this.authInterface, required this.localDataInterface});
+  LoginController({required this.authService, required this.preferencesService});
 
   Future<String?> login() async {
-    String? token = await authInterface.login();
+    String? token = await authService.login();
     if(token != null){
-      await localDataInterface.setToken(token);
+      await preferencesService.setToken(token);
     }
     return token;
   }

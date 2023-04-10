@@ -12,7 +12,7 @@ import '../../moks/local_data.mocks.dart';
 main() {
   final localDataMock = MockLocalDataInterface();
   final authMock = MockAuthInterface();
-  final loginController = LoginController(localDataInterface: localDataMock, authInterface: authMock);
+  final loginController = LoginController(preferencesService: localDataMock, authService: authMock);
 
   test('Login controller login is ok', () async {
 

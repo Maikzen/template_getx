@@ -8,7 +8,7 @@ class SplashScreen extends GetView<SplashController> {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) => checkStatusVersion());
+    WidgetsBinding.instance.addPostFrameCallback((_) => checkStatusVersion());
     return const Scaffold(
       body: Center(
         child: Text('Splash'),
