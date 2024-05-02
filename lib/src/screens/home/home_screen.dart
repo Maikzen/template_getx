@@ -19,10 +19,6 @@ class HomeScreen extends GetView<HomeController> {
               onPressed: logout,
               child: const Text('Logout'),
             ),
-            TextButton(
-              onPressed: chat,
-              child: const Text('Chat'),
-            )
           ],
         ),
       ),
@@ -36,7 +32,4 @@ class HomeScreen extends GetView<HomeController> {
     }
   }
 
-  chat() async {
-    Get.toNamed(Routes.chat);
-  }
 }

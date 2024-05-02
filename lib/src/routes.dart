@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:template/src/screens/auth/login_binding.dart';
 import 'package:template/src/screens/auth/login_screen.dart';
-import 'package:template/src/screens/chat/chat_binding.dart';
-import 'package:template/src/screens/chat/chat_screen.dart';
 import 'package:template/src/screens/home/home_binding.dart';
 import 'package:template/src/screens/home/home_screen.dart';
 import 'package:template/src/screens/splash/splash_binding.dart';
@@ -17,7 +15,6 @@ class Routes {
 
   static const String home = '/home';
   static const String login = '/auth/login';
-  static const String chat = '/chat';
   static const String splash = '/splash';
 
   static final routes = <String, WidgetBuilder>{
@@ -27,8 +24,6 @@ class Routes {
     home: (BuildContext context) => const HomeScreen(),
     // Login
     login: (BuildContext context) => const LoginScreen(),
-    // Chat
-    chat: (BuildContext context) => const ChatScreen(),
   };
 
   static final getRoutes = [
@@ -38,8 +33,6 @@ class Routes {
     GetPage(name: home, page: () => const HomeScreen(), binding: HomeBinding()),
     // Login
     GetPage(name: login, page: () => const LoginScreen(), binding: LoginBinding()),
-    // Chat
-    GetPage(name: chat, page: () => const ChatScreen(), binding: ChatBinding()),
   ];
 
 }
