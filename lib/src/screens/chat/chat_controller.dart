@@ -27,11 +27,11 @@ class ChatController extends GetxController {
     });
   }
 
-  void _scrollToBottom() {
-    scrollController.animateTo(
-      0.0,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeOut,
-    );
-  }
+  // void _scrollToBottom() {
+  //   scrollController.animateTo(
+  //     0.0,
+  //     duration: const Duration(milliseconds: 300),
+  //     curve: Curves.easeOut,
+  //   );
+  // }
 }
