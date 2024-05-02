@@ -6,11 +6,14 @@ class LoginController extends GetxController {
   AuthInterface authInterface;
   LocalDataInterface localDataInterface;
 
-  LoginController({required this.authInterface, required this.localDataInterface});
+  LoginController({
+    required this.authInterface,
+    required this.localDataInterface,
+  });
 
   Future<String?> login() async {
     String? token = await authInterface.login();
-    if(token != null){
+    if (token != null) {
       await localDataInterface.setToken(token);
     }
     return token;

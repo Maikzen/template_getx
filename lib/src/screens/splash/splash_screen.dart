@@ -4,11 +4,11 @@ import 'package:template/src/routes.dart';
 import 'package:template/src/screens/splash/splash_controller.dart';
 
 class SplashScreen extends GetView<SplashController> {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) => checkStatusVersion());
+    WidgetsBinding.instance.addPostFrameCallback((_) => checkStatusVersion());
     return const Scaffold(
       body: Center(
         child: Text('Splash'),

@@ -40,11 +40,11 @@ class SplashController extends GetxController {
           await compatibilityService.currentVersion(platform);
       String versionApp = packageInfoService.getVersionApp();
 
-      Version latestVersion = Version.parse(lastVersion.currentVersion);
+      Version latestVersion = Version.parse(lastVersion.currentVersion!);
       Version versionDevice = Version.parse(versionApp);
       if (latestVersion > versionDevice) {
         // Update available
-        Version minVersion = Version.parse(lastVersion.minVersion);
+        Version minVersion = Version.parse(lastVersion.minVersion!);
         if (minVersion > versionDevice) {
           // version expired
           statusVersion = StatusVersion.expired;

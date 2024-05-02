@@ -6,12 +6,11 @@ import 'package:template/src/routes.dart';
 
 class AppConfig extends InheritedWidget {
   const AppConfig(
-      {Key? key,required this.appDisplayName,
+      {super.key,required this.appDisplayName,
       required this.environment,
       required this.appInternalId,
       required this.stringResource,
-      required Widget child})
-      : super(key: key, child: child);
+      required super.child});
 
   final String appDisplayName;
   final String environment;
@@ -32,7 +31,7 @@ abstract class StringResource {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
